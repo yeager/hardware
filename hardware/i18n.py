@@ -9,7 +9,7 @@ from pathlib import Path
 
 def setup_translation() -> gettext.NullTranslations:
     package_root = Path(__file__).resolve().parent.parent
-    candidates = (package_root / "build" / "locale", package_root / "po", Path(sys.prefix) / "share" / "locale")
+    candidates = (Path(__file__).resolve().parent / "locale", package_root / "po", Path(sys.prefix) / "share" / "locale")
     for localedir in candidates:
         if localedir.is_dir():
             catalog = gettext.translation("hardware", localedir=str(localedir), fallback=True)
