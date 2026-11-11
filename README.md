@@ -1,5 +1,7 @@
 # Hardware
 
+![Hardware application icon](icons/hicolor/512x512/apps/se.yeager.Hardware.png)
+
 A GNOME application that shows your computer's hardware and the kernel drivers bound to each device. The interface and documentation use English by default; Swedish is available through gettext localization.
 
 ## Run
