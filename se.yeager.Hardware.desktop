@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Hardware
+Comment=View computer hardware and drivers
+Exec=hardware
+Icon=computer
+Terminal=false
+Categories=GNOME;GTK;System;HardwareSettings;
+Keywords=hardware;driver;device;

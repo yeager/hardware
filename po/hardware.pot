@@ -1,0 +1,125 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+
+#: hardware/inventory.py
+msgid "Other PCI device"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Graphics"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Network"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Storage"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "USB controller"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Audio"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Motherboard"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "USB device {id}"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Computer"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Unknown"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Manufacturer"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Processor"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Kernel"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Architecture"
+msgstr ""
+
+#: hardware/inventory.py
+msgid "Memory"
+msgstr ""
+
+#: hardware/app.py
+msgid "Driver active"
+msgstr ""
+
+#: hardware/app.py
+msgid "No driver"
+msgstr ""
+
+#: hardware/app.py
+msgid "Unknown status"
+msgstr ""
+
+#: hardware/app.py
+msgid "Driver: {driver}"
+msgstr ""
+
+#: hardware/app.py
+msgid "Hardware"
+msgstr ""
+
+#: hardware/app.py
+msgid "Search devices…"
+msgstr ""
+
+#: hardware/app.py
+msgid "Refresh inventory"
+msgstr ""
+
+#: hardware/app.py
+msgid "About Hardware"
+msgstr ""
+
+#: hardware/app.py
+msgid "Menu"
+msgstr ""
+
+#: hardware/app.py
+msgid "Devices"
+msgstr ""
+
+#: hardware/app.py
+msgid "All"
+msgstr ""
+
+#: hardware/app.py
+msgid "Hardware inventory requires Linux"
+msgstr ""
+
+#: hardware/app.py
+msgid "No devices found. Check that /sys is mounted."
+msgstr ""
+
+#: hardware/app.py
+msgid "View your computer's hardware and driver status."
+msgstr ""
+
+#: hardware/app.py
+msgid "GTK 4 and PyGObject are required. Install GTK/libadwaita Python bindings, or run `hardware --json`."
+msgstr ""

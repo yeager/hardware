@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hardware 0.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/yeager/hardware/issues\n"
+"Language: sv\n"
+"Language-Team: Swedish\n"
+"PO-Revision-Date: 2026-11-11 10:25+0100\n"
+"Last-Translator: Hardware contributors\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: hardware/inventory.py
+msgid "Other PCI device"
+msgstr "Annan PCI-enhet"
+
+#: hardware/inventory.py
+msgid "Graphics"
+msgstr "Grafik"
+
+#: hardware/inventory.py
+msgid "Network"
+msgstr "Nätverk"
+
+#: hardware/inventory.py
+msgid "Storage"
+msgstr "Lagring"
+
+#: hardware/inventory.py
+msgid "USB controller"
+msgstr "USB-styrenhet"
+
+#: hardware/inventory.py
+msgid "Audio"
+msgstr "Ljud"
+
+#: hardware/inventory.py
+msgid "Motherboard"
+msgstr "Moderkort"
+
+#: hardware/inventory.py
+msgid "USB device {id}"
+msgstr "USB-enhet {id}"
+
+#: hardware/inventory.py
+msgid "Computer"
+msgstr "Dator"
+
+#: hardware/inventory.py
+msgid "Unknown"
+msgstr "Okänt"
+
+#: hardware/inventory.py
+msgid "Manufacturer"
+msgstr "Tillverkare"
+
+#: hardware/inventory.py
+msgid "Processor"
+msgstr "Processor"
+
+#: hardware/inventory.py
+msgid "Kernel"
+msgstr "Kärna"
+
+#: hardware/inventory.py
+msgid "Architecture"
+msgstr "Arkitektur"
+
+#: hardware/inventory.py
+msgid "Memory"
+msgstr "Minne"
+
+#: hardware/app.py
+msgid "Driver active"
+msgstr "Drivrutin aktiv"
+
+#: hardware/app.py
+msgid "No driver"
+msgstr "Ingen drivrutin"
+
+#: hardware/app.py
+msgid "Unknown status"
+msgstr "Okänd status"
+
+#: hardware/app.py
+msgid "Driver: {driver}"
+msgstr "Drivrutin: {driver}"
+
+#: hardware/app.py
+msgid "Hardware"
+msgstr "Hårdvara"
+
+#: hardware/app.py
+msgid "Search devices…"
+msgstr "Sök efter enheter…"
+
+#: hardware/app.py
+msgid "Refresh inventory"
+msgstr "Uppdatera inventeringen"
+
+#: hardware/app.py
+msgid "About Hardware"
+msgstr "Om Hårdvara"
+
+#: hardware/app.py
+msgid "Menu"
+msgstr "Meny"
+
+#: hardware/app.py
+msgid "Devices"
+msgstr "Enheter"
+
+#: hardware/app.py
+msgid "All"
+msgstr "Alla"
+
+#: hardware/app.py
+msgid "Hardware inventory requires Linux"
+msgstr "Hårdvaruinventering kräver Linux"
+
+#: hardware/app.py
+msgid "No devices found. Check that /sys is mounted."
+msgstr "Inga enheter hittades. Kontrollera att /sys är monterat."
+
+#: hardware/app.py
+msgid "View your computer's hardware and driver status."
+msgstr "Visa datorns hårdvara och drivrutinsstatus."
+
+#: hardware/app.py
+msgid "GTK 4 and PyGObject are required. Install GTK/libadwaita Python bindings, or run `hardware --json`."
+msgstr "GTK 4 och PyGObject krävs. Installera Python-bindningar för GTK/libadwaita eller kör `hardware --json`."
