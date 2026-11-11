@@ -209,7 +209,7 @@ if Gtk:
 
         def about(self, *_):
             dialog = Adw.AboutWindow(application_name=_("Hardware"), application_icon=APP_ID,
-                                     developer_name="Daniel Nylander", version="0.1.0",
+                                     developer_name="Daniel Nylander", version="0.2.0",
                                      comments=_("View your computer's hardware and driver status."),
                                      license_type=Gtk.License.GPL_3_0)
             dialog.present(self.props.active_window)

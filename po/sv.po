@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Hardware 0.1.0\n"
+"Project-Id-Version: Hardware 0.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/yeager/hardware/issues\n"
 "Language: sv\n"
 "Language-Team: Swedish\n"
