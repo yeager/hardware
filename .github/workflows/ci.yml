@@ -30,7 +30,7 @@ jobs:
           PYTHONPATH="$RUNNER_TEMP/hardware-install" python -m hardware.app --json > "$RUNNER_TEMP/inventory.json"
           python -c 'import json,sys; data=json.load(open(sys.argv[1])); assert {"system", "devices", "counts", "kernel"} <= data.keys()' "$RUNNER_TEMP/inventory.json"
       - name: Check wheel contents
-        run: python -c 'import glob,zipfile; z=zipfile.ZipFile(glob.glob("dist/*.whl")[0]); names=z.namelist(); assert any(n.endswith("hardware.mo") for n in names); assert any(n.endswith("se.yeager.Hardware.desktop") for n in names)'
+        run: python -c 'import glob,zipfile; z=zipfile.ZipFile(glob.glob("dist/*.whl")[0]); names=z.namelist(); assert any(n.endswith("hardware.mo") for n in names); assert any(n.endswith("se.yeager.Hardware.desktop") for n in names); assert any(n.endswith("se.yeager.Hardware.png") for n in names)'
       - uses: actions/upload-artifact@v4
         with:
           name: hardware-distributions

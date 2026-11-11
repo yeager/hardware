@@ -20,7 +20,7 @@ except (ImportError, ValueError):
 APP_ID = "se.yeager.Hardware"
 STATUS = {
     "active": (_("Driver active"), "emblem-ok-symbolic"),
-    "missing": (_("No driver"), "dialog-warning-symbolic"),
+    "missing": (_("No driver bound"), "dialog-warning-symbolic"),
     "unknown": (_("Unknown status"), "dialog-question-symbolic"),
 }
 
@@ -89,11 +89,33 @@ if Gtk:
             self.summary.set_margin_top(18); self.summary.set_margin_bottom(8)
             self.summary.set_margin_start(20); self.summary.set_margin_end(20)
             outer.append(self.summary)
+            intro = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
+            intro.set_margin_start(20); intro.set_margin_end(20); intro.set_margin_bottom(8)
+            intro.append(Gtk.Label(label=_("Hardware overview"), xalign=0))
+            intro.get_first_child().add_css_class("title-2")
+            intro.append(Gtk.Label(label=_("This is a read-only snapshot of the hardware Linux can see. It does not change your computer."), xalign=0, wrap=True))
+            outer.append(intro)
             self.system_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=18)
             self.system_box.set_margin_start(20); self.system_box.set_margin_end(20)
             self.system_box.set_margin_top(8); self.system_box.set_margin_bottom(16)
             self.system_box.add_css_class("card")
             outer.append(self.system_box)
+            self.help_expander = Gtk.Expander(label=_("How to read this report"))
+            self.help_expander.set_margin_start(20); self.help_expander.set_margin_end(20)
+            self.help_expander.set_margin_bottom(12)
+            help_content = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
+            help_content.set_margin_start(12); help_content.set_margin_end(12)
+            help_content.set_margin_top(8); help_content.set_margin_bottom(8)
+            help_content.append(Gtk.Label(label=_("Driver active means Linux has connected the software that lets it use this device. It does not tell you whether the driver is the newest one."), xalign=0, wrap=True))
+            help_content.append(Gtk.Label(label=_("No driver bound means Linux did not show a driver connected to this device. PCI is a standard connection used by many parts inside a computer. This does not always mean something is broken."), xalign=0, wrap=True))
+            help_content.append(Gtk.Label(label=_("Unknown means this app could not reliably check the driver. This is common for USB accessories and storage devices."), xalign=0, wrap=True))
+            help_content.append(Gtk.Label(label=_("Recommended next steps"), xalign=0))
+            help_content.get_last_child().add_css_class("heading")
+            self.recommendation = Gtk.Label(xalign=0, wrap=True, selectable=True)
+            help_content.append(self.recommendation)
+            self.help_expander.set_child(help_content)
+            self.help_expander.set_expanded(True)
+            outer.append(self.help_expander)
             bar = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
             bar.set_margin_start(20); bar.set_margin_end(20); bar.set_margin_bottom(8)
             bar.append(Gtk.Label(label=_("Devices"), xalign=0, hexpand=True))
@@ -131,6 +153,15 @@ if Gtk:
         def update_summary(self):
             while child := self.summary.get_first_child(): self.summary.remove(child)
             counts = self.data.get("counts", {})
+            missing = counts.get("missing", 0)
+            unknown = counts.get("unknown", 0)
+            if missing:
+                recommendation = _("One or more PCI devices have no driver connected. If everything works as expected, you may not need to do anything. If something is not working, note the device name in this list and look for updates using your Linux distribution's built-in software or driver settings. Restart only if asked. Avoid downloading driver files from unfamiliar websites. If you are unsure, ask your Linux distribution's support community before changing anything.")
+            elif unknown:
+                recommendation = _("No PCI devices without a driver were found. Some USB and storage devices have an unknown status because Linux reports their driver differently. If your devices work, no action is needed. If one does not work, check for updates in your Linux distribution's built-in settings.")
+            else:
+                recommendation = _("Linux reports a driver connected to each PCI device checked. This does not guarantee that every driver is the newest version. If everything works, no action is needed; if not, check for updates in your Linux distribution's built-in settings.")
+            self.recommendation.set_text(recommendation)
             tiles = ((_("Devices"), sum(counts.values()), "card"),
                      (STATUS["active"][0], counts.get("active", 0), "success"),
                      (STATUS["missing"][0], counts.get("missing", 0), "warning"),
@@ -177,7 +208,7 @@ if Gtk:
             window.present()
 
         def about(self, *_):
-            dialog = Adw.AboutWindow(application_name=_("Hardware"), application_icon="computer",
+            dialog = Adw.AboutWindow(application_name=_("Hardware"), application_icon=APP_ID,
                                      developer_name="Daniel Nylander", version="0.1.0",
                                      comments=_("View your computer's hardware and driver status."),
                                      license_type=Gtk.License.GPL_3_0)

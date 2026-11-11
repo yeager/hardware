@@ -20,3 +20,4 @@ hardware = ["locale/sv/LC_MESSAGES/*.mo"]
 
 [tool.setuptools.data-files]
 "share/applications" = ["se.yeager.Hardware.desktop"]
+"share/icons/hicolor/512x512/apps" = ["icons/hicolor/512x512/apps/se.yeager.Hardware.png"]

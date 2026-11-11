@@ -26,7 +26,7 @@ Translations live in `po/sv.po`; `po/hardware.pot` is the English message templa
 ./build.sh
 ```
 
-The script uses the system `msgfmt` command to create `build/locale/sv/LC_MESSAGES/hardware.mo`, then builds the Python wheel. It does not install dependencies. To install runtime requirements on Debian or Ubuntu:
+The script uses the system `msgfmt` command to compile `hardware/locale/sv/LC_MESSAGES/hardware.mo`, then builds the Python wheel and source archive. It does not install dependencies. To install runtime requirements on Debian or Ubuntu:
 
 ```sh
 sudo apt install python3-gi gir1.2-gtk-4.0 gir1.2-adw-1 pciutils

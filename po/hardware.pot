@@ -69,7 +69,47 @@ msgid "Driver active"
 msgstr ""
 
 #: hardware/app.py
-msgid "No driver"
+msgid "No driver bound"
+msgstr ""
+
+#: hardware/app.py
+msgid "Hardware overview"
+msgstr ""
+
+#: hardware/app.py
+msgid "This is a read-only snapshot of the hardware Linux can see. It does not change your computer."
+msgstr ""
+
+#: hardware/app.py
+msgid "How to read this report"
+msgstr ""
+
+#: hardware/app.py
+msgid "Driver active means Linux has connected the software that lets it use this device. It does not tell you whether the driver is the newest one."
+msgstr ""
+
+#: hardware/app.py
+msgid "No driver bound means Linux did not show a driver connected to this device. PCI is a standard connection used by many parts inside a computer. This does not always mean something is broken."
+msgstr ""
+
+#: hardware/app.py
+msgid "Unknown means this app could not reliably check the driver. This is common for USB accessories and storage devices."
+msgstr ""
+
+#: hardware/app.py
+msgid "Recommended next steps"
+msgstr ""
+
+#: hardware/app.py
+msgid "One or more PCI devices have no driver connected. If everything works as expected, you may not need to do anything. If something is not working, note the device name in this list and look for updates using your Linux distribution's built-in software or driver settings. Restart only if asked. Avoid downloading driver files from unfamiliar websites. If you are unsure, ask your Linux distribution's support community before changing anything."
+msgstr ""
+
+#: hardware/app.py
+msgid "No PCI devices without a driver were found. Some USB and storage devices have an unknown status because Linux reports their driver differently. If your devices work, no action is needed. If one does not work, check for updates in your Linux distribution's built-in settings."
+msgstr ""
+
+#: hardware/app.py
+msgid "Linux reports a driver connected to each PCI device checked. This does not guarantee that every driver is the newest version. If everything works, no action is needed; if not, check for updates in your Linux distribution's built-in settings."
 msgstr ""
 
 #: hardware/app.py
