@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+from hardware.app import main
+
+main()
