@@ -1,7 +1,9 @@
 [Desktop Entry]
 Type=Application
 Name=Hardware
+Name[sv]=Hårdvara
 Comment=View computer hardware and drivers
+Comment[sv]=Visa datorns hårdvara och drivrutiner
 Exec=hardware
 Icon=se.yeager.Hardware
 Terminal=false
